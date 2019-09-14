@@ -5,6 +5,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 
 public interface IProxy {
+    void handleCamera();
     void onMessage(MessageApproval ma);
     void onMessage(MessageDoGreenFlash mdgf);
     void onMessage(MessageFireplaceList mfl);

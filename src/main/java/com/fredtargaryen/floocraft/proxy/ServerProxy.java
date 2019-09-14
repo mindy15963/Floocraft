@@ -4,6 +4,8 @@ import com.fredtargaryen.floocraft.network.messages.*;
 
 public class ServerProxy implements IProxy {
     @Override
+    public void handleCamera() {}
+    @Override
     public void onMessage(MessageApproval ma) {}
     @Override
     public void onMessage(MessageDoGreenFlash mdgf) {}

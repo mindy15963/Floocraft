@@ -33,6 +33,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.client.event.EntityViewRenderEvent;
 import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.extensions.IForgeContainerType;
@@ -307,6 +308,11 @@ public class FloocraftBase {
         else {
             return ((ServerWorld) world).getEntityByUuid(uuid);
         }
+    }
+
+    @SubscribeEvent
+    public static void cameraNausea(EntityViewRenderEvent.CameraSetup event) {
+        FloocraftBase.proxy.handleCamera();
     }
 
     ////////////////////////

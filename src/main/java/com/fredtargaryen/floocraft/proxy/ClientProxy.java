@@ -24,6 +24,11 @@ public class ClientProxy implements IProxy {
     public Flash flash;
 
     @Override
+    public void handleCamera() {
+        this.flash.handleCamera();
+    }
+
+    @Override
     public void onMessage(MessageApproval ma) {
         Screen s = Minecraft.getInstance().currentScreen;
         if(s instanceof FlooSignScreen) {
